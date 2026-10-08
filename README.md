@@ -44,8 +44,23 @@ Escolha uma prática ou dado de teste relevante e explique com suas próprias pa
 
 ## Respostas
 
-Repositório: `<URL_DO_REPOSITÓRIO>`
+Repositório: `https://github.com/trekhleb/javascript-algorithms`
 
-URL TestMiner: `<URL_NO_TESTMINER>`
+URL TestMiner: `https://andrehora.github.io/testminer/#trekhleb/javascript-algorithms`
 
-Explicação: `<SUA_EXPLICAÇÃO>`
+Explicação:
+Nesse repositório, podemos observar algumas práticas de teste muito comuns e importantes,a principal delas é a co-localização de testes. 
+Se você explorar as pastas dentro de `src/`, vai perceber que a maioria dos algoritmos e estruturas de dados possui uma subpasta 
+chamada `__test__` com os arquivos de teste (por exemplo: `caesarCipher.test.js`) posicionada exatamente ao lado do arquivo de 
+implementação (`caesarCipher.js`). Além disso, de quase 360 arquivos `.js` no código-fonte, quase metade (cerca de 177) são arquivos 
+exclusivos de teste. Isso facilita muito a navegação e a manutenção: quando você altera um algoritmo, o teste dele está literalmente 
+ao lado, garantindo que o desenvolvedor não se esqueça de atualizá-lo.
+
+![print do repositório com exemplos de subpastas com __test__](rep.png)
+
+Outra prática forte adotada pelo repositório é o uso de Integração Contínua (CI) e monitoramento de cobertura de código. 
+O projeto utiliza a ferramenta Jest para rodar os testes, e no arquivo `package.json` existe um script (`npm run ci`) que obriga 
+o linter e a checagem de cobertura a passarem juntos. Na página inicial do projeto, eles até exibem "badges" do Codecov, mostrando 
+que as contribuições de novos algoritmos não quebram o código existente e mantêm a qualidade do software alta.
+
+![print dos badges de "CI" e "codecov" que ficam no topo do README.md com CI passing e codecov 100%](README.png)
